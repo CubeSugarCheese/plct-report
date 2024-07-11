@@ -23,7 +23,11 @@ dnf install Xvfb openeuler-lsb cmake swig mesa-libGL glib2 freeimage freetype-de
 ```bash
 make -j8
 ```
-构建完成后直接运行项目目录下的 `webots` sh脚本即可，需要在桌面环境下运行。
+构建完成后直接运行项目目录下的 `webots` sh 脚本即可，需要在桌面环境下运行。
+### 设置环境变量
+```
+export WEBOTS_HOME={webots_dir}
+```
 
 ### 打包成 rpm
 TODO
@@ -32,6 +36,9 @@ TODO
 已经根据 [环境配置](https://github.com/CubeSugarCheese/plct-report/blob/main/2-openEuler-ROS2-Humble-test.md) 配置好了 openEuler ROS2 Humble
 
 ### 运行 Demo 测试
+初次运行命令时如果没有设置 Webots 目录对应的环境变量会提示是否自动安装 Webots，选择是后会自动下载最新稳定版本并设置环境变量，从源码安装的是 nightly 版本，二者版本不同为正常现象。
+
+[Webots 版本发布页面](https://github.com/cyberbotics/webots/releases)
 ```bash
 ros2 launch webots_ros2_universal_robot multirobot_launch.py
 ```

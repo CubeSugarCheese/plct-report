@@ -85,6 +85,7 @@ make %{?_smp_mflags}
 %install
 mkdir -p %{buildroot}/opt/%{name}-%{version}
 cp -a * %{buildroot}/opt/%{name}-%{version}/
+ln -s /opt/%{name}-%{version}/webots /usr/bin/webots
 
 %files
 %license LICENSE

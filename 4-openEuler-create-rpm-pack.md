@@ -1,7 +1,7 @@
 # openEuler 系统下的 rpm 打包教程，以 Webots 为例
 ## 本地打包
 ### 打包环境
-系统版本：openEuler
+系统版本：openEuler 24.04 x86_64
 ### 准备打包环境
 ```shell
 # 安装打包工具
